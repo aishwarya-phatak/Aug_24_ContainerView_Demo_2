@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68641AAF2CBF93CC0003485F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68641AAE2CBF93CC0003485F /* HomeViewController.swift */; };
 		68AC577E2CBE352500452083 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC577D2CBE352500452083 /* AppDelegate.swift */; };
 		68AC57802CBE352500452083 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC577F2CBE352500452083 /* SceneDelegate.swift */; };
 		68AC57822CBE352500452083 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC57812CBE352500452083 /* ViewController.swift */; };
@@ -21,9 +22,13 @@
 		68AC579C2CBE3F0500452083 /* SnackItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68AC579A2CBE3F0500452083 /* SnackItemsTableViewCell.xib */; };
 		68AC579F2CBE3F2800452083 /* LunchItemsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC579D2CBE3F2800452083 /* LunchItemsCollectionViewCell.swift */; };
 		68AC57A02CBE3F2800452083 /* LunchItemsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68AC579E2CBE3F2800452083 /* LunchItemsCollectionViewCell.xib */; };
+		68FFB4B92CC0E54000ADB72F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 68FFB4B82CC0E54000ADB72F /* SDWebImage */; };
+		68FFB4BB2CC0E54000ADB72F /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 68FFB4BA2CC0E54000ADB72F /* SDWebImageMapKit */; };
+		68FFB4BE2CC0E87300ADB72F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 68FFB4BD2CC0E87300ADB72F /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68641AAE2CBF93CC0003485F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		68AC577A2CBE352500452083 /* Aug_24_ContainerView_Demo_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aug_24_ContainerView_Demo_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AC577D2CBE352500452083 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68AC577F2CBE352500452083 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68FFB4BE2CC0E87300ADB72F /* Kingfisher in Frameworks */,
+				68FFB4BB2CC0E54000ADB72F /* SDWebImageMapKit in Frameworks */,
+				68FFB4B92CC0E54000ADB72F /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +95,7 @@
 				68AC579A2CBE3F0500452083 /* SnackItemsTableViewCell.xib */,
 				68AC579D2CBE3F2800452083 /* LunchItemsCollectionViewCell.swift */,
 				68AC579E2CBE3F2800452083 /* LunchItemsCollectionViewCell.xib */,
+				68641AAE2CBF93CC0003485F /* HomeViewController.swift */,
 			);
 			path = Aug_24_ContainerView_Demo_2;
 			sourceTree = "<group>";
@@ -107,6 +116,11 @@
 			dependencies = (
 			);
 			name = Aug_24_ContainerView_Demo_2;
+			packageProductDependencies = (
+				68FFB4B82CC0E54000ADB72F /* SDWebImage */,
+				68FFB4BA2CC0E54000ADB72F /* SDWebImageMapKit */,
+				68FFB4BD2CC0E87300ADB72F /* Kingfisher */,
+			);
 			productName = Aug_24_ContainerView_Demo_2;
 			productReference = 68AC577A2CBE352500452083 /* Aug_24_ContainerView_Demo_2.app */;
 			productType = "com.apple.product-type.application";
@@ -135,6 +149,10 @@
 				Base,
 			);
 			mainGroup = 68AC57712CBE352400452083;
+			packageReferences = (
+				68FFB4B72CC0E54000ADB72F /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				68FFB4BC2CC0E87300ADB72F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 68AC577B2CBE352500452083 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -169,6 +187,7 @@
 				68AC579F2CBE3F2800452083 /* LunchItemsCollectionViewCell.swift in Sources */,
 				68AC57942CBE3C5C00452083 /* LunchItemsViewController.swift in Sources */,
 				68AC577E2CBE352500452083 /* AppDelegate.swift in Sources */,
+				68641AAF2CBF93CC0003485F /* HomeViewController.swift in Sources */,
 				68AC57922CBE3C4900452083 /* SnackItemsViewController.swift in Sources */,
 				68AC579B2CBE3F0500452083 /* SnackItemsTableViewCell.swift in Sources */,
 				68AC57982CBE3EB900452083 /* LunchItem.swift in Sources */,
@@ -395,6 +414,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		68FFB4B72CC0E54000ADB72F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.7;
+			};
+		};
+		68FFB4BC2CC0E87300ADB72F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		68FFB4B82CC0E54000ADB72F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68FFB4B72CC0E54000ADB72F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		68FFB4BA2CC0E54000ADB72F /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68FFB4B72CC0E54000ADB72F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		68FFB4BD2CC0E87300ADB72F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68FFB4BC2CC0E87300ADB72F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 68AC57722CBE352400452083 /* Project object */;
 }

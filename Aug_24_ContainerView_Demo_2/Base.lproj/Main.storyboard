@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XDD-BO-qYt">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -17,14 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K7T-eD-hYH">
+                            <segmentedControl opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K7T-eD-hYH">
                                 <rect key="frame" x="20" y="99" width="353" height="51"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dnm-Hg-C8n"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Snack Items"/>
                                     <segment title="Lunch Items"/>
+                                    <segment title="">
+                                        <imageReference key="image" image="cup.and.saucer" catalog="system" symbolScale="medium"/>
+                                    </segment>
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="0.89054528060000004" green="0.68168048469999998" blue="0.91887223640000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -93,6 +98,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="zE3-nM-HDb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="QG7-2p-pTo" secondAttribute="bottom" constant="20" id="JTH-mt-v3d"/>
@@ -138,6 +144,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="zxR-eN-xEe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Mhg-qx-Ccs" secondAttribute="bottom" constant="20" id="3J1-H7-ft6"/>
@@ -154,10 +161,94 @@
             </objects>
             <point key="canvasLocation" x="879" y="-287"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="aB2-vf-QuG">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="XDD-BO-qYt" customClass="HomeViewController" customModule="Aug_24_ContainerView_Demo_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LV3-19-qGt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cu-gH-p1k">
+                                <rect key="frame" x="20" y="99" width="353" height="40"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SSq-EG-3vy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Audio 1 "/>
+                                <connections>
+                                    <action selector="btnAudioCLicked:" destination="XDD-BO-qYt" eventType="touchUpInside" id="Mm1-cJ-pwo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85o-Dr-Sj7">
+                                <rect key="frame" x="20" y="179" width="353" height="40"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5lp-wq-hAL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Audio 2"/>
+                                <connections>
+                                    <action selector="btnAudioCLicked:" destination="XDD-BO-qYt" eventType="touchUpInside" id="Fpo-EF-Tbt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgW-mF-uRW">
+                                <rect key="frame" x="20" y="259" width="353" height="40"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="unq-ER-37v"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Audio 3"/>
+                                <connections>
+                                    <action selector="btnAudioCLicked:" destination="XDD-BO-qYt" eventType="touchUpInside" id="ZqM-fr-e56"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="io3-5W-gr2">
+                                <rect key="frame" x="76" y="383" width="240" height="329"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vxa-ew-dJX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="85o-Dr-Sj7" firstAttribute="leading" secondItem="vxa-ew-dJX" secondAttribute="leading" constant="20" id="4Mx-f0-ehc"/>
+                            <constraint firstItem="XgW-mF-uRW" firstAttribute="leading" secondItem="vxa-ew-dJX" secondAttribute="leading" constant="20" id="Fxc-l3-KJu"/>
+                            <constraint firstItem="9Cu-gH-p1k" firstAttribute="leading" secondItem="vxa-ew-dJX" secondAttribute="leading" constant="20" id="KsX-Jk-mF1"/>
+                            <constraint firstItem="vxa-ew-dJX" firstAttribute="trailing" secondItem="9Cu-gH-p1k" secondAttribute="trailing" constant="20" id="Ovi-F6-asm"/>
+                            <constraint firstItem="XgW-mF-uRW" firstAttribute="top" secondItem="85o-Dr-Sj7" secondAttribute="bottom" constant="40" id="dqf-xp-5da"/>
+                            <constraint firstItem="vxa-ew-dJX" firstAttribute="trailing" secondItem="XgW-mF-uRW" secondAttribute="trailing" constant="20" id="fwz-mD-iy5"/>
+                            <constraint firstItem="9Cu-gH-p1k" firstAttribute="top" secondItem="vxa-ew-dJX" secondAttribute="top" constant="40" id="vC7-Wm-7dZ"/>
+                            <constraint firstItem="vxa-ew-dJX" firstAttribute="trailing" secondItem="85o-Dr-Sj7" secondAttribute="trailing" constant="20" id="y61-ij-k55"/>
+                            <constraint firstItem="85o-Dr-Sj7" firstAttribute="top" secondItem="9Cu-gH-p1k" secondAttribute="bottom" constant="40" id="yus-lJ-Spr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnAudio1" destination="9Cu-gH-p1k" id="ZsG-h0-Kh7"/>
+                        <outlet property="btnAudio2" destination="85o-Dr-Sj7" id="B7d-1Y-jHz"/>
+                        <outlet property="btnAudio3" destination="XgW-mF-uRW" id="O6y-3O-C9F"/>
+                        <outlet property="imageView1" destination="io3-5W-gr2" id="4xr-qT-V40"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dIy-hf-TM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1707.6335877862596" y="-208.45070422535213"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="cup.and.saucer" catalog="system" width="128" height="91"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
